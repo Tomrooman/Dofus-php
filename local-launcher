@@ -1,0 +1,16 @@
+#!/bin/bash
+Begin() {
+    echo
+    read -p "Commande --> " command
+    echo
+
+if [ $command == "exit" ]; then
+    echo bye bye
+    echo
+else
+    clear
+    php Dofus.php $command
+    Begin
+fi
+}
+Begin
